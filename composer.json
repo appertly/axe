@@ -1,0 +1,20 @@
+{
+    "name": "appertly/axe",
+    "description": "Appertly XHP Extras: Some useful XHP tags and utilities",
+    "license": "MIT",
+    "keywords": ["hack", "hhvm", "xhp"],
+    "homepage": "http://github.com/appertly/axe",
+    "require": {
+        "hhvm": "~3.12",
+        "facebook/xhp-lib": "~2.2"
+    },
+    "require-dev": {
+        "hackpack/hackunit": "~0.6"
+    },
+    "autoload": {
+        "classmap": [
+          "src",
+          "xhp"
+        ]
+    }
+}
