@@ -3,7 +3,7 @@
  * Axe
  *
  * @copyright 2015-2016 Appertly contributors
- * @license   http://opensource.org/licenses/MIT MIT License
+ * @license   MIT
  */
 namespace Axe;
 
@@ -11,7 +11,7 @@ namespace Axe;
  * Stores page information to pass along to rendering functions.
  *
  * @copyright 2015-2016 Appertly contributors
- * @license   http://opensource.org/licenses/MIT MIT License
+ * @license   MIT
  */
 class Page
 {
