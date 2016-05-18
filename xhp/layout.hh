@@ -20,7 +20,7 @@ class :axe:layout extends :x:element
 
         $body = <body>
             {$this->getChildren()}
-            {$page->getBodyScripts()}
+            <axe:scripts page={$page}/>
         </body>;
 
         foreach ($page->getBodyClasses() as $class) {
@@ -36,7 +36,7 @@ class :axe:layout extends :x:element
                     <meta charset={$page->getEncoding()} />
                     <title>{$page->getTitle()}</title>
                     {$page->getMeta()}
-                    {$page->getHeadScripts()}
+                    <axe:scripts location="head" page={$page}/>
                     {$page->getLinks()}
                 </head>
                 {$body}
