@@ -18,7 +18,7 @@ class :axe:select extends :x:element implements HasXHPHelpers
     attribute :select,
         ?Stringish value = null,
         bool blank = false,
-        ConstMap<string,string> options = ImmMap{};
+        KeyedTraversable<string,string> options = [];
 
     protected function render(): XHPRoot
     {
