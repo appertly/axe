@@ -20,7 +20,7 @@ class :axe:toolbar extends :x:element implements HasXHPHelpers
 
     protected function render(): XHPRoot
     {
-        return <div class="pane-toolbar" role="toolbar" aria-label={$this->:label}>
+        return <div role="toolbar" aria-label={$this->:label}>
             {$this->getChildren()}
         </div>;
     }

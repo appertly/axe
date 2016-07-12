@@ -24,6 +24,7 @@ class :axe:pane-contents extends :x:element implements HasXHPHelpers
         foreach ($this->getChildren() as $kid) {
             if ($kid instanceof :axe:toolbar) {
                 $buttons = $kid;
+                $kid->addClass('pane-toolbar');
             } else {
                 $inner->appendChild($kid);
             }
