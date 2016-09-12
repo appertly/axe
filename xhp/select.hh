@@ -18,7 +18,7 @@ class :axe:select extends :x:element implements HasXHPHelpers
     attribute :select,
         ?Stringish value = null,
         bool blank = false,
-        KeyedTraversable<string,string> options = [];
+        KeyedTraversable<string,mixed> options = [];
 
     protected function render(): XHPRoot
     {
@@ -32,7 +32,7 @@ class :axe:select extends :x:element implements HasXHPHelpers
         $value = (string) $this->:value;
         foreach ($this->:options as $k => $v) {
             $s->appendChild(
-                <option value={$k} selected={$k === $value}>{$v}</option>
+                <option value={$k} selected={$k === $value}>{(string) $v}</option>
             );
         }
         return $s;
