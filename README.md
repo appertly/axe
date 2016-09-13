@@ -58,9 +58,10 @@ We've included several helper tags for common stuff.
 
 * Gravatar image
 * Columns (and golden ratio columns)
-* Bootstrap-compatible breadcrumbs, form groups, and fieldsets
+* Bootstrap-compatible breadcrumbs, form groups, pagination, and fieldsets
 * Nearly Bootstrap-compatible alerts
 * Email and Phone Number links
 * Convert text with line endings to multiple `<p>`s
 * `<select>` and `<option>`s generated from a `Map` of values
+* `<input type="checkbox">` or `<input type="radio">` and `<label>`s generated from a `Map` of values
 * …and _more!_
