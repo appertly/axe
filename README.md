@@ -2,6 +2,9 @@
 
 **A** ppertly **X** HP **E** xtras: Some useful XHP tags and utilities for Hack/HHVM.
 
+[![Packagist](https://img.shields.io/packagist/v/appertly/axe.svg)](https://packagist.org/packages/appertly/axe)
+[![Build Status](https://travis-ci.org/appertly/axe.svg)](https://travis-ci.org/appertly/axe)
+
 ## Installation
 
 You can install this library using Composer:
