@@ -15,10 +15,10 @@ class :axe:pagination extends :x:element implements HasXHPHelpers
 
     category %flow;
     children empty;
-    attribute :ol,
-        string href = "",
+    attribute :ul,
+        Stringish href = "",
         ConstMap<string,mixed> queryParams = ImmMap{},
-        string parameter = "page",
+        Stringish parameter = "page",
         int current = 1,
         int total = 1,
         bool short = false;
@@ -43,7 +43,7 @@ class :axe:pagination extends :x:element implements HasXHPHelpers
                 </li>
             );
         } else {
-            $params[$param] = $current - 1;
+            $params[(string) $param] = $current - 1;
             $query = http_build_query($params);
             $pagination->appendChild(
                 <li class="page-item">
@@ -103,7 +103,7 @@ class :axe:pagination extends :x:element implements HasXHPHelpers
                 </li>
             );
         } else {
-            $params[$param] = min($current + 1, $total);
+            $params[(string) $param] = min($current + 1, $total);
             $query = http_build_query($params);
             $pagination->appendChild(
                 <li class="page-item">
@@ -114,14 +114,14 @@ class :axe:pagination extends :x:element implements HasXHPHelpers
         return $pagination;
     }
 
-    private function numberedLink(int $page, int $current, int $total, string $href, Map<string,mixed> $params, string $param): :li
+    private function numberedLink(int $page, int $current, int $total, Stringish $href, Map<string,mixed> $params, Stringish $param): :li
     {
         if ($current === $page) {
             return <li class="page-item active">
                 <span class="page-link">{$page}</span>
             </li>;
         } else {
-            $params[$param] = $page;
+            $params[(string) $param] = $page;
             $query = http_build_query($params);
             $link = <a href={"$href?$query"} class="page-link">{$page}</a>;
             if ($page === $total) {
