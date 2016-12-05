@@ -26,7 +26,7 @@ class :axe:select extends :x:element implements HasXHPHelpers
         $this->transferAllAttributes($s);
         if ($this->:blank) {
             $s->appendChild(
-                <option></option>
+                <option>{" "}</option>
             );
         }
         $value = (string) $this->:value;
