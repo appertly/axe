@@ -15,7 +15,7 @@ class :axe:form-group extends :x:element implements HasXHPHelpers
 
     category %flow;
     children (pcdata | %flow)*;
-    attribute :xhp:html-element,
+    attribute :div,
         bool required = false,
         bool inline = false,
         Stringish label @required,

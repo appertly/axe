@@ -26,7 +26,7 @@ class :axe:side-box extends :x:element implements HasXHPHelpers
 
     protected function render(): XHPRoot
     {
-        $buttons = <x:frag />;
+        $buttons = null;
         $inner = <div class="side-box-contents"/>;
         foreach ($this->getChildren() as $kid) {
             if ($kid instanceof :axe:toolbar) {
